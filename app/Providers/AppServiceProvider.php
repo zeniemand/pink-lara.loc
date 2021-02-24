@@ -16,6 +16,27 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+
+        //dd($_ENV);
+
+        //$env = env('APP_ENV');
+        //dd(['APP_ENV value: ' => $env]);
+        //dd($this->app->environment('production'));
+       // dd($this->app->environment());
+
+        if($this->app->environment('production')) {
+            //\URL::forceScheme('https');
+            //dd(['message' => 'stooop']);
+
+            $this->app['request']->server->set('HTTPS', true);
+
+
+            //$env = env('APP_ENV');
+            //dd(['APP_ENV value: ' => $env]);
+            //\URL::forceScheme('https');
+        }
+
+
         /**
          * Директива присваивания значения конктретной переменной
          *

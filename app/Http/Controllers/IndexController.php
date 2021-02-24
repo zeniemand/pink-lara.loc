@@ -31,6 +31,7 @@ class IndexController extends SiteController
      */
     public function index()
     {
+        //phpinfo();
         //Переменная содержащая элементы portfolio:
         $portfolios = $this->getPortfolio();
 

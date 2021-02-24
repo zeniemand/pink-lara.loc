@@ -21,6 +21,8 @@ class PortfoliosRepository extends Repository {
         //Создаем конструктор SQL запросов. Выбираем все поля из БД:
         $builder = $this->model->select($select);
 
+
+
         //>Если переданы параметны выборки, то их применяем:
         if($take){
             $builder->take($take);
